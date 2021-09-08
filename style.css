@@ -12,14 +12,45 @@ body {
     background-repeat: no-repeat;
 }
 
+
 .coca-cola {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 8px;
+    height: 2px;
     width: 0.5%;
-    margin-left: 35%;
+    margin-left: 40%;
     margin-top: 20%;
+}
+.garrafa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0%;
+}
+h2 {
+color: white;
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+
+
+}
+
+p {
+color: white;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+margin-left: 10% ;
+margin-top: 2%;
 }
