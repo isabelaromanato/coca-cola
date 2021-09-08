@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(#cf2425,  #da6163,  #da4448);
+    background-repeat: no-repeat;
+}
+
+.coca-cola {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 8px;
+    width: 0.5%;
+    margin-left: 35%;
+    margin-top: 20%;
+}
