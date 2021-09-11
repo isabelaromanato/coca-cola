@@ -2,43 +2,49 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
+/*reset*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/*padronizção para a página*/
 body {
     width: 100vw;
     height: 100vh;
     background-image: linear-gradient(#cf2425,  #da6163,  #da4448);
     background-repeat: no-repeat;
     display: flex;
+    flex-direction: column;
     
 }
 
-
+/*fundo escrto coca-cola*/
 .coca-cola {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 1px;
-    width: 0.5%;
-    margin-left: 20%;
-    margin-top: 20%;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 50%; /*tag para opacidade | interresante p usar em outros proj.*/
+    /*auxilio do prof para posicionar melhor o elemento*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    position: absolute;
+    /* position: relative; */ /*não é ideal nesse caso devido a responsividade*/
 }
+
+/*sombra*/
 .garrafa {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 4%;
-    margin-right: 50%;
+    height: 80vh;
+    filter: drop-shadow(10px 400px 15px #0008); 
+    /* filter: drop-shadow(10px 400px 15px 10px black);  
+    não é necessário passar os três tamanhos - preto fica muito escuro*/
+
 }
-h2 {
+p {
 color: white;
 font-family: Montserrat;
 font-style: normal;
@@ -52,12 +58,70 @@ align-items: center;
 
 }
 
-p {
-color: white;
-font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-margin-left: 10% ;
-margin-top: 2%;
+.texto-principal {
+    font-size: 2.20rem; /*não encontrei um tamanho ideal em px*/
+    position: absolute; /*absolute devido a responsividadade*/
+    color: #FFF;
+    font-family: 'Montserrat'; /*importada*/
+    width: 200px;
+    transform: translateX(-100%);
+    text-align: center;
+    margin-right: 30px;
 }
+
+/*sem esse header a página estica muito*/
+header {
+    height: 100px;
+}
+
+header nav{
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 19px; /*espaçamento entre os itens*/
+    margin-left: 85px ;
+    font-family: 'Roboto'; /*importada*/
+    cursor: pointer; /* p/ click do mouse*/
+}
+main{
+    flex-grow: 1;/*define o fator de crecimento dentro do flex*/
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100px;
+    margin-right: 60px;
+}
+
+/*estudar mais responsividade- nível com maior dificuldade no código*/
+@media (max-width:768px) {
+    header nav{
+        margin-left: 25px;
+    }
+    main{
+        align-items: flex-end;
+    }
+    .texto-principal{
+        top: 120px;
+        font-size: 1rem;
+        transform: translatex(0);
+        width: 100px;
+        margin: 0;
+    }
+    .garrafa{
+        height: 75vh;
+    }
+    footer{
+        height: 70px;
+        margin-right: 35px;
+    }
+}
+
